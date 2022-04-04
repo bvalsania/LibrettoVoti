@@ -1,21 +1,20 @@
 package it.polito.tdp.librettovoti.model;
 
-import java.util.Objects;
-
 public class Voto {
-	private String nome ;
-	private int punti ;
 	
-	public Voto(String nome, int punti) {
-		super();
-		this.nome = nome;
+	private String nomeCorso;
+	private int punti;
+
+	public Voto(String nomeCorso, int punti) {
+		super(); 
+		this.nomeCorso = nomeCorso;
 		this.punti = punti;
 	}
-	public String getNome() {
-		return nome;
+	public String getNomeCorso() {
+		return nomeCorso;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeCorso(String nomeCorso) {
+		this.nomeCorso = nomeCorso;
 	}
 	public int getPunti() {
 		return punti;
@@ -23,16 +22,15 @@ public class Voto {
 	public void setPunti(int punti) {
 		this.punti = punti;
 	}
-	
 	@Override
 	public String toString() {
-		return nome+" : "+ punti;
+		return  nomeCorso +": "+ punti;
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + ((nomeCorso == null) ? 0 : nomeCorso.hashCode());
 		result = prime * result + punti;
 		return result;
 	}
@@ -45,17 +43,16 @@ public class Voto {
 		if (getClass() != obj.getClass())
 			return false;
 		Voto other = (Voto) obj;
-		if (nome == null) {
-			if (other.nome != null)
+		if (nomeCorso == null) {
+			if (other.nomeCorso != null)
 				return false;
-		} else if (!nome.equals(other.nome))
+		} else if (!nomeCorso.equals(other.nomeCorso))
 			return false;
 		if (punti != other.punti)
 			return false;
 		return true;
 	}
 	
+
 	
-	
-		
 }
